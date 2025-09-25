@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2024',
       text: 'A letterbank sourced from the text on shirts from the thrift store.',
       images: [
-        {src: 'GG_X_GG/ggxgg_letters_copy.png'},
+        {src: 'GG_X_GG/all.png'},
         {src: 'GG_X_GG/e.png'},
         {src: 'GG_X_GG/all_spreads.png'},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 3.png'},
