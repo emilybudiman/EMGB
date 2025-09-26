@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       `,
       images: [
-        { type: "image", src: "me2.png", caption: "Me (Em B)" }
+        { type: "image", src: "me2.png", caption: "Me (Em B) <br> Currently based in New York." }
       ]
     },
     workExperience: {
