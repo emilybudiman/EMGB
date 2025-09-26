@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2023',
       text: 'The Art is Cheap manifesto by the Bread and Puppet Theater. Designed with accesibility and mass production in mind.',
       images: [
-        {src: 'MANIFESTO/manifesto_installed.png'}
+        {src: 'MANIFESTO/installed.jpg'},
+        {src: 'MANIFESTO/manifesto_installed.jpg'},
       ]
     },
     project4: {
