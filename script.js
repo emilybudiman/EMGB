@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Japanese bound, charcoal on tracing paper',
       dimensions: '110 pages',
       year: '2023',
-      text: '',
+      text: 'Scanned over lightbox',
       images: [
-        {src: 'FLIPBOOK/bridge3_comp.png', caption: 'Spreads scanned over lightbox'},
+        {src: 'FLIPBOOK/bridge3_comp.png'},
         {src: 'FLIPBOOK/bridge3_mov_bg.gif'}
       ]
     },
@@ -119,8 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         {src: 'IDKHTD/idkhtd.gif'},
         {src: 'IDKHTD/white_bg/idkhtd2.jpg'},
+        {src: 'IDKHTD/white_bg/idkhtd3.jpg',layout: "double"},
+        {src: 'IDKHTD/white_bg/idkhtd6.jpg',layout: "double"},
         {src: 'IDKHTD/white_bg/idkhtd9.jpg'},
-        {src: 'IDKHTD/white_bg/idkhtd11.jpg', caption: 'Selected Spreads'}
+        {src: 'IDKHTD/white_bg/idkhtd11.jpg'}
       ]
     },
     project8: {
