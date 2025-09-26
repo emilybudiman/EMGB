@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'Scanned over lightbox',
       images: [
         {src: 'FLIPBOOK/bridge3_comp.png'},
-        {src: 'FLIPBOOK/bridge3_mov_bg.gif'}
+        {src: 'FLIPBOOK/bridge3_mov.gif',layout: "double"},
+        {src: 'FLIPBOOK/IMG_11334.png',layout: "double"},
       ]
     },
     project7: {
