@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Risgraph printed on copy paper and tiled',
       dimensions: '25.5 x 33 in',
       year: '2023',
-      text: 'The Art is Cheap manifesto by the Bread and Puppet Theater. Designed with accesibility and mass production in mind.',
+      text: 'The Art is Cheap manifesto by the Bread and Puppet Theater. Designed with accessibility and mass production in mind.',
       images: [
         {src: 'MANIFESTO/installed.jpg'},
         {src: 'MANIFESTO/manifesto_installed.jpg'},
