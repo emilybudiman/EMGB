@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Charcoal on tracing paper',
       dimensions: '110 pages',
       year: '2023',
-      text: 'Scanned over lightbox',
+      text: 'Scanned over lightbox.',
       images: [
         {src: 'FLIPBOOK/bridge3_comp.png'},
         {src: 'FLIPBOOK/bridge3_mov.gif',layout: "double"},
@@ -160,6 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'MISSED_CONNECTIONS/MADLIBS/page1.jpg',layout: "double"},
         {src: 'MISSED_CONNECTIONS/MADLIBS/page2.jpg',layout: "double"},
         {src: 'MISSED_CONNECTIONS/MADLIBS/page3.jpg',layout: "double"},
+      ]
+    },
+    project11: {
+      title: 'CULTURA',
+      medium: 'Photolithograph',
+      dimensions: '16 x 20 in',
+      year: '2024',
+      text: 'Flyer for Zoume’s East Coast tour.',
+      images: [
+        {src: 'SHOW_FLYER/litho_2a.jpg'},
       ]
     },
   };
