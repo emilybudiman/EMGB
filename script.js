@@ -94,9 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     project5: {
       title: 'untitled (Collage)',
       medium: 'Collage',
-      dimensions: '',
+      dimensions: '10 x 13 1/4 in',
       year: '2022',
-      text: '',
       images: [
         {src: 'MISC_2D/time_collage.jpg'}
       ]
@@ -139,6 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'BAUHAUS/SCANS/3.jpg'},
         {src: 'BAUHAUS/SCANS/4.jpg'},
         {src: 'BAUHAUS/SCANS/5.jpg'},
+      ]
+    },
+    project9: {
+      title: 'DOR!',
+      medium: 'Pressure-print',
+      dimensions: '12 x 9 in',
+      year: '2025',
+      text: 'Pressure-print and letterpress type on Vandercook press.',
+      images: [
+        {src: 'DOR!/DOR_1.jpg'},
+        {src: 'DOR!/DOR_2.jpg',layout: "double"},
+        {src: 'DOR!/DOR_3.jpg',layout: "double"},
+        {src: 'DOR!/DOR_sketch1.jpg'},
+        {src: 'DOR!/DOR_sketch2.jpg'},
       ]
     },
   };
