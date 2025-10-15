@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'A letterbank sourced from the text on shirts from the thrift store.',
       images: [
         {src: 'GG_X_GG/websiteintro.gif'},
-        {src: 'GG_X_GG/all.png'},
+        {src: 'GG_X_GG/ggxgg_letters.png'},
         {src: 'GG_X_GG/e.png'},
         {src: 'GG_X_GG/all_spreads.png'},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 3.png'},
