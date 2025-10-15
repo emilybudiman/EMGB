@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project5: {
       title: 'untitled (Collage)',
-      medium: 'Collage',
       dimensions: '10 x 13 1/4 in',
       year: '2022',
       images: [
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project6: {
       title: 'untitled (Flipbook)',
-      medium: 'Japanese bound, charcoal on tracing paper',
+      medium: 'Charcoal on tracing paper',
       dimensions: '110 pages',
       year: '2023',
       text: 'Scanned over lightbox',
@@ -114,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project7: {
       title: 'I Dont Know How to Drive and I Never Will',
-      medium: 'Laser printed',
       dimensions: '8.5 x 11 in, 20 pages',
       year: '2023',
       text: 'A zine documenting photos, text, and drawings accumulated over the course of the Spring 23 semester.',
@@ -129,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project8: {
       title: 'Bauhaus',
-      medium: 'Laser printed',
       dimensions: '5.5 x 8.5 in, 56 pages',
       year: '2023',
       text: 'Using text from wikipedia, inspired by their show flyers and other promotional material.',
@@ -142,16 +139,27 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project9: {
       title: 'DOR!',
-      medium: 'Pressure-print',
+      medium: 'Pressure-print and letterpress type on Vandercook press.',
       dimensions: '12 x 9 in',
       year: '2025',
-      text: 'Pressure-print and letterpress type on Vandercook press.',
       images: [
         {src: 'DOR!/DOR_1.jpg'},
         {src: 'DOR!/DOR_2.jpg',layout: "double"},
         {src: 'DOR!/DOR_3.jpg',layout: "double"},
         {src: 'DOR!/DOR_sketch1.jpg'},
         {src: 'DOR!/DOR_sketch2.jpg'},
+      ]
+    },
+    project10: {
+      title: 'Missed Connections (1/3)',
+      dimensions: '5 x 7 in',
+      year: '2025',
+      text: 'Composed of text sourced from Craigslist Missed Connections posts between May 7–10, 2025, turned into a Mad Libs–style fill-in-the-blank format. Turning the intimate, and overly specific language of anonymous longing into a reusable script for real-life encounters. Inspired by the Strictly Personals section of New York Magazine.',
+      images: [
+        {src: 'MISSED_CONNECTIONS/MADLIBS/cover.jpg',layout: "double"},
+        {src: 'MISSED_CONNECTIONS/MADLIBS/page1.jpg',layout: "double"},
+        {src: 'MISSED_CONNECTIONS/MADLIBS/page2.jpg',layout: "double"},
+        {src: 'MISSED_CONNECTIONS/MADLIBS/page3.jpg',layout: "double"},
       ]
     },
   };
