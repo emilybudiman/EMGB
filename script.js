@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
    project1: {
       title: '09.11.23',
-      medium: 'French bound copy paper',
+      medium: 'French bound copy paper.',
       dimensions: '4.25 x 11 in, 96 pages',
       year: '2025',
       text: 'September 11, 2023, as archived by technology, documented by the minute. Exploring technology as memory, memory as interpretive, and the book as a simulacrum of the day itself. ',
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project2: {
       title: 'Physical Scraps',
-      medium: 'Printed on scrap paper collected over 3 years, bound with Elmers Glue-All and Gluestick',
+      medium: 'Printed on scrap paper collected over 3 years, bound with Elmers Glue-All and Gluestick.',
       dimensions: '5.5 x 8.5 in',
       year: '2024',
       text: 'Unintentionally taken photos living in the camera roll. Digital and physical clutter, storage, the memory graveyard, excess of content, photography as authenticity, collected dust, growing mold.',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project3: {
       title: 'Art is Cheap!',
-      medium: 'Risgraph printed on copy paper and tiled',
+      medium: 'Risgraph printed on copy paper and tiled.',
       dimensions: '25.5 x 33 in',
       year: '2023',
       text: 'The Art is Cheap manifesto by the Bread and Puppet Theater. Designed with accessibility and mass production in mind.',
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project4: {
       title: 'GGXGG',
-      medium: 'Inkjet & <a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a>',
+      medium: 'Inkjet & <a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a>.',
       dimensions: '5 x 7 in',
       year: '2024',
       text: 'A letterbank sourced from the text on shirts from the thrift store.',
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project6: {
       title: 'untitled (Flipbook)',
-      medium: 'Charcoal on tracing paper',
+      medium: 'Charcoal on tracing paper.',
       dimensions: '110 pages',
       year: '2023',
       text: 'Scanned over lightbox.',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project11: {
       title: 'CULTURA',
-      medium: 'Photolithograph',
+      medium: 'Photolithograph.',
       dimensions: '16 x 20 in',
       year: '2024',
       text: 'Flyer for Zoume’s 2024 East Coast shows.',
