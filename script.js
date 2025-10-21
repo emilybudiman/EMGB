@@ -41,19 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     project2: {
-      title: 'Digital Dust/Physical Scraps (2/2)',
-      medium: 'Printed on copy paper/scrap paper collected over 3 years, bound with Elmers Glue-All and Gluestick',
-      dimensions: '8.5 x 11/5.5 x 8.5 in',
+      title: 'Physical Scraps',
+      medium: 'Printed on scrap paper collected over 3 years, bound with Elmers Glue-All and Gluestick',
+      dimensions: '5.5 x 8.5 in',
       year: '2024',
       text: 'Unintentionally taken photos living in the camera roll. Digital and physical clutter, storage, the memory graveyard, excess of content, photography as authenticity, collected dust, growing mold.',
       images: [
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/DIGITAL_DUST/DIGITAL_DUST.gif', caption: 'Digital Dust'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.16.58 PM.png'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.17.13 PM.png'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.11.52 PM.png'},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0008.png'},
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.12.01 PM.png'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.17.43 PM.png'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/PHYSICAL_SCRAPS.gif', caption: 'Physical Scraps'},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.54 AM.png',layout: "double"},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.39 AM.png',layout: "double"},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0002.png'},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0005.png',layout: "double"},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0010.png',layout: "double"},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0009.png'},
       ]
     },
     project3: {
@@ -78,17 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'GG_X_GG/ggxgg_letters.png'},
         {src: 'GG_X_GG/e.png'},
         {src: 'GG_X_GG/all_spreads.png'},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 3.png'},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 5.png',layout: "double"},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 6.png',layout: "double"},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 7.png'},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 23.png',layout: "double"},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 24.png',layout: "double"},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 27.png',layout: "double"},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 33.png',layout: "double"},
         {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 34.png'},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 36.png',layout: "double"},
-        {src: 'GG_X_GG/Spreads/scan0039 2 (dragged) 38.png',layout: "double"},
       ]
     },
     project5: {
@@ -167,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Photolithograph',
       dimensions: '16 x 20 in',
       year: '2024',
-      text: 'Flyer for Zoume’s East Coast tour.',
+      text: 'Flyer for Zoume’s 2024 East Coast shows.',
       images: [
         {src: 'SHOW_FLYER/litho_2a.jpg'},
       ]

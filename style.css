@@ -149,6 +149,11 @@ body {
   line-height: 1.4em;
 }
 
+.content-images .project2 {
+  border: black;
+  border-width: 200px;
+}
+
 #lightbox {
   position: fixed;
   top: 0;
