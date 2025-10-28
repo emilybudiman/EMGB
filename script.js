@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul class="cv-sections">
           <p>Education</p>
           <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li><br>
-          <p><a href="#" id="work-experience-link">Work Experience</a></p>
+          <p>Work Experience</p>
           <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July 2025 – Present</li>
           <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br> Archiving & Creative Photoshop Intern<br> July 2025 – Present</li>
           <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br> Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
@@ -22,12 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: "image", src: "me2.png", caption: "Me (Em B). <br> Currently based in New York." }
       ]
     },
+    /*
     workExperience: {
       images: [
         { src: "WORK_EX/yve/2a.JPG",layout: "double"},
         { src: "WORK_EX/yve/2b.png",layout: "double"},
       ]
     },
+*/
    project1: {
       title: '09.11.23',
       medium: 'French bound copy paper.',
