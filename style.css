@@ -149,10 +149,6 @@ body {
   line-height: 1.4em;
 }
 
-.content-images .project2 {
-  border: black;
-  border-width: 200px;
-}
 
 #lightbox {
   position: fixed;
@@ -190,12 +186,17 @@ body {
   line-height: 1.4;
 }
 
-.content-images.cv-image img{
-  border: 1px solid black; 
-  padding: 10px; 
+.cv-image img {
+  border: 1px solid black;
+  padding: 10px;
   max-width: 100%;
   display: block;
   margin-bottom: 1em;
+}
+
+.content-images:not(.cv-image) img {
+  border: none;
+  padding: 0;
 }
 
 .content-text {

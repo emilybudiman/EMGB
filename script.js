@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     workExperience: {
       images: [
-        { src: ""},
+        { src: "WORK_EX/yve/2a.JPG",layout: "double"},
+        { src: "WORK_EX/yve/2b.png",layout: "double"},
       ]
     },
    project1: {
@@ -32,12 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'French bound copy paper.',
       dimensions: '4.25 x 11 in, 96 pages',
       year: '2025',
-      text: 'September 11, 2023, as archived by technology, documented by the minute. Exploring technology as memory, memory as interpretive, and the book as a simulacrum of the day itself. ',
+      text: 'September 11, 2023, as archived by my devices, documented by the minute. Trying to document a day as honestly as possible. If memory is unreliable, how do I remove myself from my experience of the day?. ',
       images: [
-        {src: '091123/09.11.23_spread_layout.jpg', caption: 'Select spreads'},
+        {src: '091123/09.11.23_spread_layout.jpg'},
+        {src: '091123/DETAIL.jpg'},
         {src: '091123/SPREADS/09.11.23-04.jpg',layout: "double"},
         {src: '091123/SPREADS/09.11.23-12.jpg',layout: "double"},
-        {src: '091123/spreads.key.png', caption: 'Spread + key'}
+        {src: '091123/spreads.key.png', caption: 'Spread + key'},
       ]
     },
     project2: {
@@ -49,17 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0008.png'},
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-08-29 at 2.12.01 PM.png'},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.54 AM.png',layout: "double"},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.39 AM.png',layout: "double"},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.54 AM.png',layout: "double", caption: 'Raw images from camera roll.'},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/Screen Shot 2025-10-21 at 1.08.39 AM.png',layout: "double", caption: 'Treated to look like mold.'},
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0002.png'},
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0005.png',layout: "double"},
         {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0010.png',layout: "double"},
-        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/IMG_0009.png'},
+        {src: 'DIGITAL_DUST.PHYSICAL_SCRAPS/PHYSICAL_SCRAPS/SPREADS/grid.jpg'},
       ]
     },
     project3: {
       title: 'Art is Cheap!',
-      medium: 'Risgraph printed on copy paper and tiled.',
+      medium: 'Risgraph on copy paper, tiled with tape.',
       dimensions: '25.5 x 33 in',
       year: '2023',
       text: 'The Art is Cheap manifesto by the Bread and Puppet Theater. Designed with accessibility and mass production in mind.',
@@ -69,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     project4: {
-      title: 'GGXGG',
-      medium: 'Inkjet & <a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a>.',
+      title: 'GG X GG',
+      medium: 'Inkjet & <u><a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a></u>.',
       dimensions: '5 x 7 in',
       year: '2024',
-      text: 'A letterbank sourced from the text on shirts from the thrift store.',
+      text: 'A limited letterbank sourced from the text on shirts from the thrift store. Playing on rehoming and reusing objects.',
       images: [
         {src: 'GG_X_GG/websiteintro.gif'},
         {src: 'GG_X_GG/ggxgg_letters.png'},
@@ -87,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project5: {
       title: 'untitled (Collage)',
-      dimensions: '10 x 13 1/4 in',
+      dimensions: '10 x 13.25 in',
       year: '2022',
       images: [
         {src: 'MISC_2D/time_collage.jpg'}
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'I Dont Know How to Drive and I Never Will',
       dimensions: '8.5 x 11 in, 20 pages',
       year: '2023',
-      text: 'A zine documenting photos, text, and drawings accumulated over the course of the Spring 23 semester.',
+      text: 'A zine documenting images, text, and drawings accumulated over the course of the Spring 23’ semester.',
       images: [
         {src: 'IDKHTD/idkhtd.gif'},
         {src: 'IDKHTD/white_bg/idkhtd2.jpg'},
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Bauhaus',
       dimensions: '5.5 x 8.5 in, 56 pages',
       year: '2023',
-      text: 'Using text from wikipedia, inspired by their show flyers and other promotional material.',
+      text: 'Using text from Wikipedia, inspired by their show flyers and other promotional material.',
       images: [
         {src: 'BAUHAUS/spreads.comp.jpg'},
         {src: 'BAUHAUS/SCANS/3.jpg'},
@@ -140,10 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'DOR!/DOR_1.jpg'},
         {src: 'DOR!/DOR_2.jpg',layout: "double"},
         {src: 'DOR!/DOR_3.jpg',layout: "double"},
-        {src: 'DOR!/DOR_sketch1.jpg'},
-        {src: 'DOR!/DOR_sketch2.jpg'},
       ]
     },
+/*
     project10: {
       title: 'Missed Connections (1/3)',
       dimensions: '5 x 7 in',
@@ -156,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'MISSED_CONNECTIONS/MADLIBS/page3.jpg',layout: "double"},
       ]
     },
+*/
     project11: {
       title: 'CULTURA',
       medium: 'Photolithograph.',
@@ -164,6 +166,33 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'Flyer for Zoume’s 2024 East Coast shows.',
       images: [
         {src: 'SHOW_FLYER/litho_2a.jpg'},
+      ]
+    },
+/*
+    project12: {
+      title: 'Missed Connections (2/3)',
+      dimensions: '4 1/4 x 7 1/4 in',
+      year: '2025',
+      text: 'Composed of text sourced from Craigslist Missed Connections posts between May 7–10, 2025, reformatted into poetry, inspired by the wistful sincerity of the language used in the forum.',
+      images: [
+        {src: 'MISSED_CONNECTIONS/POETRY/SPREADS/IMG_0011_web.jpg'},
+        {src: 'MISSED_CONNECTIONS/POETRY/SPREADS/IMG_0013.png'},
+        {src: 'MISSED_CONNECTIONS/POETRY/SPREADS/IMG_0018.png',layout: "double"},
+        {src: 'MISSED_CONNECTIONS/POETRY/SPREADS/IMG_0020.png',layout: "double"},
+      ]
+    },
+*/
+    project13: {
+      title: 'The Specter of Automation',
+      dimensions: '4.25 x 11 in, 20 pages.',
+      year: '2025',
+      text: 'The Specter of Automation by Zachary Biondi, transcibed and formatted using Photoshop’s contact sheet function. Using personal images filtered under the word ’auto’, in chronogical order.',
+      images: [
+        {src: 'THE_SPECTER_OF_AUTOMATION/DETAIL.jpg'},
+        {src: 'THE_SPECTER_OF_AUTOMATION/SPREADS/2.jpg',layout: "double"},
+        {src: 'THE_SPECTER_OF_AUTOMATION/SPREADS/4.jpg',layout: "double"},
+        {src: 'THE_SPECTER_OF_AUTOMATION/SPREADS/5.jpg'},
+        {src: 'THE_SPECTER_OF_AUTOMATION/PROCESS.png'},
       ]
     },
   };
