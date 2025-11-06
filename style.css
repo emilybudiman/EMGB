@@ -41,7 +41,7 @@ body {
 }
 
 .sidebar h1 {
-  font-size: 0.8em;
+  font-size: 1.4em;
   font-weight: 500;
   margin-bottom: 1.2em;
 }
@@ -64,6 +64,7 @@ body {
 .sidebar nav ul li {
   margin-bottom: 0.4em;
   font-size: 0.8em;
+  margin-left: 0.8em;
 }
 
 .sidebar nav a {
@@ -116,13 +117,13 @@ body {
   position: sticky;
   top: 40px; 
   align-self: start;
-  border-left: 1px dashed black;
+  border-left: 1px solid black;
   padding-left: 30px;
 }
 
 .content-text p{ 
   font-size: 0.8em;
-  line-height: 1.4;
+  line-height: 2.0em;
 }
 
 .content-text h2{ 
@@ -184,6 +185,7 @@ body {
   font-size: 0.8em;
   margin-bottom: 2em;
   line-height: 1.4;
+  margin-left: 0.8em;
 }
 
 .cv-image img {

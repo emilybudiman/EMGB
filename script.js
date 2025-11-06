@@ -19,17 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       `,
       images: [
-        { type: "image", src: "me2.png", caption: "Me (Em B). <br> Currently based in New York." }
+        { type: "image", src: "me2.png", caption: "Me (Em B). <br> Indonesian. <br> Currently based in New York." }
       ]
     },
-    /*
     workExperience: {
       images: [
         { src: "WORK_EX/yve/2a.JPG",layout: "double"},
         { src: "WORK_EX/yve/2b.png",layout: "double"},
       ]
     },
-*/
+
    project1: {
       title: '09.11.23',
       medium: 'French bound copy paper.',
@@ -186,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
     project13: {
       title: 'The Specter of Automation',
-      dimensions: '4.25 x 11 in, 20 pages.',
+      dimensions: '4.25 x 11 in, 20 pages',
       year: '2025',
       text: 'The Specter of Automation by Zachary Biondi, transcibed and formatted using Photoshop’s contact sheet function. Using personal images filtered under the word ’auto’, in chronogical order.',
       images: [
@@ -197,6 +196,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'THE_SPECTER_OF_AUTOMATION/PROCESS.png'},
       ]
     },
+  /*
+    project14: {
+      title: 'Upcoming: Doomsday',
+      dimensions: '',
+      year: '2024',
+      text: 'Made on the weekend of the solar eclipse.',
+      images: [
+        {src: 'DOOMSDAY/poster3.gif'},
+      ]
+    },
+  */
   };
 
   function renderImages(images) {
