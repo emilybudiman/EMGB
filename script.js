@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'French bound copy paper.',
       dimensions: '4.25 x 11 in, 96 pages',
       year: '2025',
-      text: 'September 11, 2023, as archived by my devices, documented by the minute. Trying to document a day as honestly as possible. If memory is unreliable, how do I remove myself from my experience of the day?. ',
+      text: 'September 11, 2023, as archived by my devices, documented by the minute. Trying to document a day as honestly as possible. If memory is unreliable, how do I remove myself from my experience of the day? ',
       images: [
         {src: '091123/09.11.23_spread_layout.jpg'},
         {src: '091123/DETAIL.jpg'},
@@ -314,26 +314,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------- RENDER PROJECT ----------
-  function renderProject(key) {
-    const project = projects[key];
-    if (!project) return;
+function renderProject(key) {
+  const project = projects[key];
+  if (!project) return;
 
-    content.innerHTML = `
-      <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
-        ${project.images ? renderImages(project.images) : ''}
-      </div>
-      <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
-        ${project.title ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2>` : ''}<br>
-        ${project.medium ? `<p>${project.medium}</p>` : ''}
-        ${project.dimensions ? `<p>${project.dimensions}</p>` : ''}
-        ${project.year ? `<p>${project.year}</p>` : ''}<br>
-        ${project.text ? `<p>${project.text}</p>` : ''}
-      </div>
-    `;
+  // Build bits conditionally so we don't leave ghost gaps
+  const titleHTML = project.title
+    ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2>`
+    : '';
 
-    // Re-init lightbox & navigation after rendering
-    initLightboxAndNav();
-  }
+  const metaHTML = [
+    project.medium ? `<p>${project.medium}</p>` : '',
+    project.dimensions ? `<p>${project.dimensions}</p>` : '',
+    project.year ? `<p>${project.year}</p>` : ''
+  ].join('');
+
+  // For CV, project.text is already HTML (the <ul>), so don't wrap in <p>
+  const textHTML = project.text
+    ? (key === 'cv' ? project.text : `<p>${project.text}</p>`)
+    : '';
+
+  content.innerHTML = `
+    <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
+      ${project.images ? renderImages(project.images) : ''}
+    </div>
+    <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
+      ${titleHTML}
+      ${metaHTML}
+      ${textHTML}
+    </div>
+  `;
+
+  // Re-init lightbox & navigation after rendering
+  initLightboxAndNav();
+}
 
   // ---------- SIDEBAR LINKS ----------
   sidebarLinks.forEach(link => {

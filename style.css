@@ -46,13 +46,13 @@ body {
   margin-bottom: 1.2em;
 }
 
-.sidebar h1:hover{
-  text-decoration: underline;
-}
-
-.sidebar h1 a{
+.sidebar h1 a {
   color: black;
   text-decoration: none;
+}
+
+.sidebar h1 a:hover {
+  color: dodgerblue;
 }
 
 
@@ -73,7 +73,7 @@ body {
 }
 
 .sidebar nav a:hover{
-  font-weight: bold;
+  color: dodgerblue;
 }
 
 .sidebar nav a.active {
@@ -94,7 +94,7 @@ body {
 }
 
 .sidebar .social-links a:hover {
-  font-weight: bold;
+  color: dodgerblue;
 }
 
 .content {
@@ -115,7 +115,7 @@ body {
 
 .content-text {
   position: sticky;
-  top: 40px; 
+  top: 0;
   align-self: start;
   border-left: 1px solid black;
   padding-left: 30px;
@@ -125,11 +125,13 @@ body {
   font-size: 0.8em;
   line-height: 1.6em;
   margin-bottom: 0.8em;
+  margin-top: 0;   /* prevents accidental spacing increase */
 }
 
-.content-text h2{ 
+.content-text h2 {
   font-size: 0.8em;
   line-height: 1.2em;
+  margin-bottom: 1.8em;   /* space before medium/dimensions text */
 }
 
 .content-text a{ 
@@ -138,7 +140,7 @@ body {
 }
 
 .content-text a:hover{ 
-  font-weight: bold;
+  color: dodgerblue;
 }
 
 .content-images img {
@@ -175,6 +177,12 @@ body {
   font-size: 0.8em;
   text-decoration: underline;
 }
+
+.cv-sections p:first-of-type {
+  margin-top: 0;
+}
+
+
 
 .cv-sections {
   list-style: none;
@@ -219,11 +227,16 @@ body {
 }
 
 .cv-text a:hover{
-  font-weight: bold;
+  color: dodgerblue;
+}
+
+.cv-title {
+  margin-top: 0;   /* Remove unintended top spacing */
+  margin-bottom: 1.8em;
 }
 
 #work-experience-link:hover{
-  font-weight: bold;
+  color: dodgerblue;
 }
 
 #work-experience-link img{
@@ -238,4 +251,62 @@ body {
 
 .image-row figure {
   margin: 0;
+}
+
+
+@media (max-width: 900px) {
+  /* Stack sidebar on top, content below */
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    position: static;      /* no sticky on mobile */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    overflow-y: visible;
+  }
+
+  .content {
+    padding: 20px;
+    display: block;        /* no grid, just one column */
+  }
+
+  .content-images {
+    margin-right: 0;
+    gap: 12px;
+  }
+
+  .content-text {
+    position: static;      /* turns off sticky */
+    border-left: none;
+    border-top: 1px solid black;
+    padding-left: 0;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  /* Make text a bit more readable on small screens */
+  .sidebar nav ul li,
+  .sidebar-projects p,
+  .content-text p,
+  .content-text h2,
+  .cv-sections p,
+  .cv-sections li {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .content-images img,
+  .cv-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Two-up image rows still work, just tighter gap */
+  .image-row {
+    gap: 1rem;
+  }
 }
