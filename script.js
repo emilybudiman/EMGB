@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
       text: `
         <ul class="cv-sections">
           <p>Education</p>
-          <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li><br>
+          <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li>
           <p>Work Experience</p>
           <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July 2025 – Present</li>
-          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br> Archiving & Creative Photoshop Intern<br> July 2025 – Present</li>
-          <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br> Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
-          <li><a href="https://dgalleriejakarta.com/" target="_blank" rel="noopener noreferrer">D Gallerie</a><br> Gallery Intern<br> July – August 2024</li>
-          <li><a href="https://musica.id/" target="_blank" rel="noopener noreferrer">Musica Studios</a><br> Graphic Design Intern<br> June – August 2023</li><br>
+          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Archiving & Creative Photoshop Intern<br> July 2025 – Present</li>
+          <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br>Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
+          <li><a href="https://dgalleriejakarta.com/" target="_blank" rel="noopener noreferrer">D Gallerie</a><br>Gallery Intern<br> July – August 2024</li>
+          <li><a href="https://musica.id/" target="_blank" rel="noopener noreferrer">Musica Studios</a><br>Graphic Design Intern<br> June – August 2023</li>
         </ul>
       `,
       images: [
@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'DOR!/DOR_3.jpg',layout: "double"},
       ]
     },
-/*
     project10: {
       title: 'Missed Connections (1/3)',
       dimensions: '5 x 7 in',
@@ -158,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'MISSED_CONNECTIONS/MADLIBS/page3.jpg',layout: "double"},
       ]
     },
-*/
     project11: {
       title: 'CULTURA',
       medium: 'Photolithograph.',
@@ -185,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
     project13: {
       title: 'The Specter of Automation',
+      medium: 'Contact Sheet function on Photoshop.',
       dimensions: '4.25 x 11 in, 20 pages',
       year: '2025',
       text: 'The Specter of Automation by Zachary Biondi, transcibed and formatted using Photoshop’s contact sheet function. Using personal images filtered under the word ’auto’, in chronogical order.',
@@ -207,12 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
   */
+    project15: {
+      title: 'It’s Sunday, You Better Be Fishing',
+      medium: 'Woodcut print.',
+      dimensions: '12.5 x 17 in',
+      year: '2025',
+      images: [
+        {src: 'SUNDAY_FISH/SF_2.png', layout:"double"},
+        {src: 'SUNDAY_FISH/SF_1.png', layout:"double"},
+      ]
+    },
   };
 
   function renderImages(images) {
     let html = '';
     for (let i = 0; i < images.length; i++) {
       const media = images[i];
+
       if (media.layout === "double" && images[i + 1] && images[i + 1].layout === "double") {
         html += `
           <div class="image-row">
@@ -226,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </figure>
           </div>
         `;
-        i++; // skip the next one since it's paired
+        i++; // skip paired image
       } else {
         html += `
           <figure>
@@ -239,59 +249,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return html;
   }
 
-  function renderProject(key) {
-    const project = projects[key];
-    if (!project) return;
-
-    content.innerHTML = `
-      <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
-        ${project.images ? renderImages(project.images) : ''}
-      </div>
-      <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
-        ${project.title ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2><br>` : ''}
-        ${project.medium ? `<p>${project.medium}</p>` : ''}
-        ${project.dimensions ? `<p>${project.dimensions}</p>` : ''}
-        ${project.year ? `<p>${project.year}</p>` : ''}<br>
-        ${project.text ? `<p>${project.text}</p>` : ''}
-      </div>
-    `;
-
-    initImageNav();
-    initLightbox();
-    initCVLinks(); // must run AFTER rendering CV content
-  }
-
-  function updateImagesOnly(images) {
-    const container = document.querySelector('.content-images');
-    if (!container) return;
-    container.innerHTML = renderImages(images);
-    initImageNav();
-    initLightbox();
-  }
-
-  function initCVLinks() {
-    const workLink = document.getElementById('work-experience-link');
-    if (workLink) {
-      workLink.addEventListener('click', e => {
-        e.preventDefault();
-        if (projects.workExperience) {
-          updateImagesOnly(projects.workExperience.images);
-        }
-      });
-    }
-  }
-
-  // ---------- IMAGE NAV + LIGHTBOX ----------
+  // ---------- LIGHTBOX & NAV ----------
   let figures = [];
   let currentIndex = 0;
   let lightbox, lightboxImg;
 
-  function initImageNav() {
+  function initLightboxAndNav() {
+    // Collect all current figures
     figures = Array.from(document.querySelectorAll('.content-images figure'));
     currentIndex = 0;
-  }
 
-  function initLightbox() {
+    // Create lightbox if it doesn't exist
     lightbox = document.getElementById('lightbox');
     if (!lightbox) {
       lightbox = document.createElement('div');
@@ -305,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lightboxImg = lightbox.querySelector('img');
 
+    // Add click events to all figures
     figures.forEach((fig, i) => {
       const img = fig.querySelector('img');
       if (!img) return;
@@ -316,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Close lightbox on click
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox || e.target === lightboxImg) {
         lightbox.style.display = 'none';
@@ -323,8 +293,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Keyboard navigation
   document.addEventListener('keydown', e => {
     if (!figures.length) return;
+
     if (e.key === 'ArrowRight') {
       currentIndex = (currentIndex + 1) % figures.length;
       figures[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -340,6 +312,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ---------- RENDER PROJECT ----------
+  function renderProject(key) {
+    const project = projects[key];
+    if (!project) return;
+
+    content.innerHTML = `
+      <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
+        ${project.images ? renderImages(project.images) : ''}
+      </div>
+      <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
+        ${project.title ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2>` : ''}<br>
+        ${project.medium ? `<p>${project.medium}</p>` : ''}
+        ${project.dimensions ? `<p>${project.dimensions}</p>` : ''}
+        ${project.year ? `<p>${project.year}</p>` : ''}<br>
+        ${project.text ? `<p>${project.text}</p>` : ''}
+      </div>
+    `;
+
+    // Re-init lightbox & navigation after rendering
+    initLightboxAndNav();
+  }
+
+  // ---------- SIDEBAR LINKS ----------
   sidebarLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -349,6 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Initial render
+  // ---------- INITIAL RENDER ----------
   renderProject('cv');
 });
