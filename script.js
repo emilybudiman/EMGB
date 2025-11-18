@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         {src: 'SUNDAY_FISH/SF_2.png', layout:"double"},
         {src: 'SUNDAY_FISH/SF_1.png', layout:"double"},
+        {src: 'SUNDAY_FISH/SF_3.png'},
       ]
     },
   };
