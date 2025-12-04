@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.querySelector('.sidebar');
   const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+  const menuToggle = document.querySelector('.menu-toggle');
   const content = document.getElementById('project-content');
 
-  // ---------- PROJECT DATA ----------
   const projects = {
     cv: {
       title: 'Curriculum Vitae',
       text: `
         <ul class="cv-sections">
-          <p>Education</p>
+          <p><u>Education</u></p>
           <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li>
-          <p>Work Experience</p>
+          <p class="cv-heading-row"> 
+            <a href="#" id="work-experience-link">
+              <span class="cv-heading">Work Experience</span>
+              <span class="cv-arrow">⮑</span>
+            </a>
+          </p>
           <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July 2025 – Present</li>
           <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Archiving & Creative Photoshop Intern<br> July 2025 – Present</li>
           <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br>Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
@@ -19,15 +25,48 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
       `,
       images: [
-        { type: "image", src: "me2.png", caption: "Me (Em B). <br> Indonesian. <br> Currently based in New York." }
+        { type: "image", src: "me2.png", caption: "Me (Em B). <br> 22, 5’4, Indonesian. <br> Currently based in New York." }
       ]
     },
     workExperience: {
+      title: 'Work Experience',
+      text: `
+      <ul class="cv-sections">
+        <p><u>Skills & Experiences:</u></p>
+        <li> - Image retouching for websites, artist prints, publishing, advertising/marketing materials, social media, etc. </li>
+        <li> - Scanning film. </li>
+        <li> - Designing album covers/show flyers. </li>
+        <li> - Creating and formatting documents (press releases, catalogues, exhibition materials, invoices, social media posts, etc.). </li>
+        <li> - Administration (updating mailing lists, and platforms, organizing stock/files/archive, research). </li>
+        <li> - Bookmaking and printing. </li>
+        <li> - Running backstage operations at live events. </li>
+        <li> - Assisting at art fairs: interacting with clients and visitors, processing sales. </li>
+        <li> - Minor art handling: assisting with installing, deinstalling, packing, and shipping. </li>
+      </ul>
+      `,
       images: [
-        { src: "WORK_EX/yve/2a.JPG",layout: "double"},
-        { src: "WORK_EX/yve/2b.png",layout: "double"},
+        { src: "WORK_EX/yve/2a.JPG",layout: "double", caption: 'Allan Rand, <i>My Universe</i>'},
+        { src: "WORK_EX/yve/2b.png",layout: "double", caption: 'for YveYANG Gallery'},
+        { src: "WORK_EX/yve/4a.png",layout: "double", caption: 'Anastazie Anderson, <i>Annie (two horses)</i>'},
+        { src: "WORK_EX/yve/4b.png",layout: "double", caption: 'for YveYANG Gallery for NADA Miami'},
+        { src: "WORK_EX/misc/6a.jpg",layout: "double"},
+        { src: "WORK_EX/misc/6b.png",layout: "double", caption: 'for Permias NYC'},
+        { src: "WORK_EX/musica/satriathemonster_spotify.png",layout: "double", caption: 'for Satria the Monster'},
+        { src: "WORK_EX/musica/peraukertas_spotify.png",layout: "double", caption: 'for Peraukertas'},
+        { src: "WORK_EX/bb/prints3.png", caption: 'Assorted studio prints for Betty Beaumont'},
+        { src: "WORK_EX/bb/horseshoe.jpg",layout: "double", caption: 'Preparing materials for installation'},
+        { src: "WORK_EX/bb/horseshoe2.png",layout: "double"},
       ]
     },
+
+  projectWebsite: {
+  title: 'Personal Website',
+  year: '2025',
+  text: `<p>A continuously updated archive of my design, writing, and digital experiments.</p>`,
+  linkToHome: true,
+  images: []
+},
+
 
    project1: {
       title: '09.11.23',
@@ -73,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project4: {
       title: 'GG X GG',
-      medium: 'Inkjet & <u><a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a></u>.',
+      medium: 'Inkjet & <a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a>.',
       dimensions: '5 x 7 in',
       year: '2024',
       text: 'A limited letterbank sourced from the text on shirts from the thrift store. Playing on rehoming and reusing objects.',
@@ -213,13 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
       year: '2025',
       images: [
         {src: 'SUNDAY_FISH/SF_2.png', layout:"double"},
-        {src: 'SUNDAY_FISH/SF_1.png', layout:"double"},
-        {src: 'SUNDAY_FISH/SF_3.png'},
+        {src: 'SUNDAY_FISH/SF_3.png', layout:"double"},
+        {src: 'SUNDAY_FISH/SF_blot.png'},
       ]
     },
   };
 
-  function renderImages(images) {
+    function renderImages(images) {
+    if (!images || !images.length) return '';
     let html = '';
     for (let i = 0; i < images.length; i++) {
       const media = images[i];
@@ -237,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </figure>
           </div>
         `;
-        i++; // skip paired image
+        i++; 
       } else {
         html += `
           <figure>
@@ -250,17 +290,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return html;
   }
 
-  // ---------- LIGHTBOX & NAV ----------
   let figures = [];
   let currentIndex = 0;
   let lightbox, lightboxImg;
 
   function initLightboxAndNav() {
-    // Collect all current figures
     figures = Array.from(document.querySelectorAll('.content-images figure'));
     currentIndex = 0;
 
-    // Create lightbox if it doesn't exist
     lightbox = document.getElementById('lightbox');
     if (!lightbox) {
       lightbox = document.createElement('div');
@@ -274,7 +311,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lightboxImg = lightbox.querySelector('img');
 
-    // Add click events to all figures
     figures.forEach((fig, i) => {
       const img = fig.querySelector('img');
       if (!img) return;
@@ -286,7 +322,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close lightbox on click
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox || e.target === lightboxImg) {
         lightbox.style.display = 'none';
@@ -294,7 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard navigation
   document.addEventListener('keydown', e => {
     if (!figures.length) return;
 
@@ -313,12 +347,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ---------- RENDER PROJECT ----------
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+  }
+
+function initCVLinks() {
+  const workLink = document.getElementById('work-experience-link');
+
+  if (workLink) {
+    workLink.addEventListener('click', e => {
+      e.preventDefault();
+      renderProject('workExperience');
+    });
+  }
+}
+
 function renderProject(key) {
   const project = projects[key];
   if (!project) return;
 
-  // Build bits conditionally so we don't leave ghost gaps
+  // if this is the "Personal Website" project, send user back to CV
+  if (project.linkToHome) {
+    renderProject('cv');
+    return;
+  }
+
   const titleHTML = project.title
     ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2>`
     : '';
@@ -329,7 +385,6 @@ function renderProject(key) {
     project.year ? `<p>${project.year}</p>` : ''
   ].join('');
 
-  // For CV, project.text is already HTML (the <ul>), so don't wrap in <p>
   const textHTML = project.text
     ? (key === 'cv' ? project.text : `<p>${project.text}</p>`)
     : '';
@@ -345,20 +400,24 @@ function renderProject(key) {
     </div>
   `;
 
-  // Re-init lightbox & navigation after rendering
   initLightboxAndNav();
+  initCVLinks(); // so the Work Experience link works whenever CV is shown
 }
 
-  // ---------- SIDEBAR LINKS ----------
   sidebarLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       sidebarLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
       renderProject(link.dataset.project);
+
+      // Close sidebar on mobile
+      if (window.innerWidth <= 900 && sidebar && menuToggle) {
+        sidebar.classList.remove('open');
+        menuToggle.classList.remove('open');
+      }
     });
   });
 
-  // ---------- INITIAL RENDER ----------
   renderProject('cv');
 });
