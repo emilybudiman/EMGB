@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'French bound copy paper.',
       dimensions: '4.25 x 11 in, 96 pages',
       year: '2025',
-      text: 'September 11, 2023, as archived by my devices, documented by the minute. Trying to document a day as honestly as possible. If memory is unreliable, how do I remove myself from my experience of the day? ',
+      text: 'September 11, 2023, as archived by my devices, documented by the minute. An attempt to document a day as honestly as possible by removing myself from it. ',
       images: [
         {src: '091123/09.11.23_spread_layout.jpg'},
         {src: '091123/DETAIL.jpg'},
@@ -138,13 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
     project6: {
       title: 'untitled (Flipbook)',
       medium: 'Charcoal on tracing paper.',
-      dimensions: '110 pages',
+      dimensions: '4.25 x 5.5 in, 110 pages',
       year: '2023',
       text: 'Scanned over lightbox.',
       images: [
         {src: 'FLIPBOOK/bridge3_comp.png'},
         {src: 'FLIPBOOK/bridge3_mov.gif',layout: "double"},
-        {src: 'FLIPBOOK/IMG_11334.png',layout: "double"},
+        {src: 'FLIPBOOK/cover.png',layout: "double"},
+        {src: 'FLIPBOOK/nontransparent.png'},
       ]
     },
     project7: {
@@ -225,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Contact Sheet function on Photoshop.',
       dimensions: '4.25 x 11 in, 20 pages',
       year: '2025',
-      text: 'The Specter of Automation by Zachary Biondi, transcibed and formatted using Photoshop’s contact sheet function. Using personal images filtered under the word ’auto’, in chronogical order.',
+      text: 'The Specter of Automation by Zachary Biondi, formatted using Photoshop’s contact sheet function. Transcribed by editing file names of personal images filtered under the word ’auto’, in chronogical order, ',
       images: [
         {src: 'THE_SPECTER_OF_AUTOMATION/DETAIL.jpg'},
         {src: 'THE_SPECTER_OF_AUTOMATION/SPREADS/2.jpg',layout: "double"},
