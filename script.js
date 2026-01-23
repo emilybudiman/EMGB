@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project10: {
       title: 'Missed Connections (1/3)',
-      dimensions: '5 x 7 in',
+      dimensions: '5 x 7 in, 29 pages',
       year: '2025',
       text: 'Composed of text sourced from Craigslist Missed Connections posts between May 7–10, 2025, turned into a Mad Libs–style fill-in-the-blank format. Turning the intimate, and overly specific language of anonymous longing into a reusable script for real-life encounters. Inspired by the Strictly Personals section of New York Magazine.',
       images: [
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Contact Sheet function on Photoshop.',
       dimensions: '4.25 x 11 in, 20 pages',
       year: '2025',
-      text: 'The Specter of Automation by Zachary Biondi, formatted using Photoshop’s contact sheet function. Transcribed by editing file names of personal images filtered under the word ’auto’, in chronogical order, ',
+      text: 'The Specter of Automation by Zachary Biondi, formatted using Photoshop’s contact sheet function. Transcribed by editing file names of personal images filtered under the word ’auto’, in chronogical order.',
       images: [
         {src: 'THE_SPECTER_OF_AUTOMATION/DETAIL.jpg'},
         {src: 'THE_SPECTER_OF_AUTOMATION/SPREADS/2.jpg',layout: "double"},
