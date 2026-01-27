@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         { src: "WORK_EX/yve/2a.JPG",layout: "double", caption: 'Allan Rand, <i>My Universe</i>'},
         { src: "WORK_EX/yve/2b.png",layout: "double", caption: 'for YveYANG Gallery'},
+        { src: "WORK_EX/bb/bb.fishtales.a.jpg",layout: "double", caption: 'Betty Beaumont, <i>Fish Tales</i>'},
+        { src: "WORK_EX/bb/bb.fishtales.b.jpg",layout: "double", caption: '(1 of 35)'},
+        { src: "WORK_EX/bb/bb.fishtales.full.jpg", caption: '(35 of 35)'},
         { src: "WORK_EX/yve/4a.png",layout: "double", caption: 'Anastazie Anderson, <i>Annie (two horses)</i>'},
         { src: "WORK_EX/yve/4b.png",layout: "double", caption: 'for YveYANG Gallery for NADA Miami'},
         { src: "WORK_EX/misc/6a.jpg",layout: "double"},
