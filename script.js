@@ -57,8 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: "WORK_EX/musica/satriathemonster_spotify.png",layout: "double", caption: 'for Satria the Monster'},
         { src: "WORK_EX/musica/peraukertas_spotify.png",layout: "double", caption: 'for Peraukertas'},
         { src: "WORK_EX/bb/prints3.png", caption: 'Assorted studio prints for Betty Beaumont'},
-        { src: "WORK_EX/bb/horseshoe.jpg",layout: "double", caption: 'Preparing materials for installation'},
-        { src: "WORK_EX/bb/horseshoe2.png",layout: "double"},
+        { src: "WORK_EX/bb/horseshoe.jpg",layout: "double"},
+        { src: "WORK_EX/bb/horseshoe2.png",layout: "double", caption: 'Preparing materials for installation'},
+        { src: "WORK_EX/bb/bb.vs.a.png",layout: "double", caption: 'Betty Beaumont, <i>Voices (Whose, Which, What)</i>'},
+        { src: "WORK_EX/bb/bb.vs.b.png",layout: "double", caption: 'for Betty Beaumont'},
+        { src: "WORK_EX/bb/bb.vs.bb.a.png",layout: "double", caption: 'Betty Beaumont, <i>Voices (Whose, Which, What)</i>'},
+        { src: "WORK_EX/bb/bb.vs.bb.b.png",layout: "double", caption: 'for Betty Beaumont'},
+        { src: "WORK_EX/yve/yy.piti.install.png", caption: 'Photographing and measuring works'},
       ]
     },
 
