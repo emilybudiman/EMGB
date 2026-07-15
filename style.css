@@ -29,7 +29,7 @@ body {
 }
 
 .sidebar {
-  width: 25vw;
+  width:clamp(260px,25vw,360px);
   color: var(--text);
   padding: 50px;
   display: flex;
@@ -80,6 +80,31 @@ body {
   text-decoration: underline;
 }
 
+.sidebar nav a::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.sidebar nav a[data-type="publication"]::before {
+    background: dodgerblue;
+}
+
+.sidebar nav a[data-type="website"]::before {
+    background: tomato;
+}
+
+.sidebar nav a[data-type="print"]::before {
+    background: limegreen;
+}
+
+.sidebar nav a[data-type="identity"]::before {
+    background: gold;
+}
+
 
 .sidebar .social-links {
   margin-top: auto;
@@ -106,7 +131,6 @@ body {
 }
 
 .content-images {
-  /* Left column now */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -115,10 +139,11 @@ body {
 
 .content-text {
   position: sticky;
-  top: 0;                  /* pin to top of viewport */
+  top: 0;
   align-self: flex-start;
   border-left: 1px solid black;
   padding-left: 30px;
+  padding-top: 0;
 }
 
 .content-text p{ 
@@ -180,22 +205,6 @@ body {
   font-size: 0.8em;
 }
 
-.cv-heading {
-  text-decoration: underline;
-}
-
-.cv-heading-row:hover {
-  color: dodgerblue;
-}
-
-.cv-arrow {
-  text-decoration: none;
-}
-
-.cv-sections p:first-of-type {
-  margin-top: 0;
-}
-
 .cv-sections {
   list-style: none;
   padding: 0;
@@ -221,21 +230,6 @@ body {
   padding: 0;
 }
 
-.content-text {
-  padding-top: 0; 
-}
-
- .content-text a{
-    text-decoration: underline;
-  }
-
-.carousel-item {
-  display: none;
-}
-
-.carousel-item.active {
-  display: block;
-}
 
 .cv-text a{
   color: black;
@@ -251,13 +245,6 @@ body {
   margin-bottom: 1.8em;
 }
 
-#work-experience-link:hover{
-  color: dodgerblue;
-}
-
-#work-experience-link img{
-  border: none;
-}
 
 .image-row {
   display: grid;
@@ -303,14 +290,16 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ---------- MOBILE LAYOUT ---------- */
+
+/* MOBILE LAYOUT */
+
 @media (max-width: 900px) {
   body {
     display: block;
   }
 
   .menu-toggle {
-    display: block;           /* show hamburger on mobile */
+    display: block;
   }
 
   .sidebar {
@@ -318,8 +307,7 @@ body {
     left: -100%;
     top: 0;
     height: 100vh;
-    width: 50vw;
-    background: white;
+    width:min(320px,80vw);    background: white;
     padding-left: 23px;
     padding-top: 75px;
     transition: left 0.3s ease;
@@ -342,7 +330,7 @@ body {
   }
 
   .content-text {
-    position: static;          /* turns sticky OFF on mobile */
+    position: static;
     border-left: none;
     border-top: 1px solid black;
     padding-left: 0;

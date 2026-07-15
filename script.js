@@ -11,14 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <ul class="cv-sections">
           <p><u>Education</u></p>
           <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li>
-          <p class="cv-heading-row"> 
-            <a href="#" id="work-experience-link">
-              <span class="cv-heading">Work Experience</span>
-              <span class="cv-arrow">⮑</span>
-            </a>
-          </p>
-          <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July 2025 – Present</li>
-          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Archiving & Creative Photoshop Intern<br> July 2025 – Present</li>
+          
+          <p><u>Work Experience</u></p>
+          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Digital Media Specialist<br> July 2025 – July 2026</li>
+          <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July – December 2025</li>
           <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br>Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
           <li><a href="https://dgalleriejakarta.com/" target="_blank" rel="noopener noreferrer">D Gallerie</a><br>Gallery Intern<br> July – August 2024</li>
           <li><a href="https://musica.id/" target="_blank" rel="noopener noreferrer">Musica Studios</a><br>Graphic Design Intern<br> June – August 2023</li>
@@ -28,53 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: "image", src: "me2.png", caption: "Me (Em B). <br> 22, 5’4, Indonesian. <br> Currently based in New York." }
       ]
     },
-    workExperience: {
-      title: 'Work Experience',
-      text: `
-      <ul class="cv-sections">
-        <p><u>Skills & Experiences:</u></p>
-        <li> - Image retouching for websites, artist prints, publishing, advertising/marketing materials, social media, etc. </li>
-        <li> - Scanning film. </li>
-        <li> - Designing album covers/show flyers. </li>
-        <li> - Creating and formatting documents (press releases, catalogues, exhibition materials, invoices, social media posts, etc.). </li>
-        <li> - Administration (updating mailing lists, and platforms, organizing stock/files/archive, research). </li>
-        <li> - Bookmaking and printing. </li>
-        <li> - Running backstage operations at live events. </li>
-        <li> - Assisting at art fairs: interacting with clients and visitors, processing sales. </li>
-        <li> - Minor art handling: assisting with installing, deinstalling, packing, and shipping. </li>
-      </ul>
-      `,
-      images: [
-        { src: "WORK_EX/yve/2a.JPG",layout: "double", caption: 'Allan Rand, <i>My Universe</i>'},
-        { src: "WORK_EX/yve/2b.png",layout: "double", caption: 'for YveYANG Gallery'},
-        { src: "WORK_EX/bb/bb.fishtales.a.jpg",layout: "double", caption: 'Betty Beaumont, <i>Fish Tales</i>'},
-        { src: "WORK_EX/bb/bb.fishtales.b.jpg",layout: "double", caption: '(1 of 35)'},
-        { src: "WORK_EX/bb/bb.fishtales.full.jpg", caption: '(35 of 35)'},
-        { src: "WORK_EX/yve/4a.png",layout: "double", caption: 'Anastazie Anderson, <i>Annie (two horses)</i>'},
-        { src: "WORK_EX/yve/4b.png",layout: "double", caption: 'for YveYANG Gallery for NADA Miami'},
-        { src: "WORK_EX/misc/6a.jpg",layout: "double"},
-        { src: "WORK_EX/misc/6b.png",layout: "double", caption: 'for Permias NYC'},
-        { src: "WORK_EX/musica/satriathemonster_spotify.png",layout: "double", caption: 'for Satria the Monster'},
-        { src: "WORK_EX/musica/peraukertas_spotify.png",layout: "double", caption: 'for Peraukertas'},
-        { src: "WORK_EX/bb/prints3.png", caption: 'Assorted studio prints for Betty Beaumont'},
-        { src: "WORK_EX/bb/horseshoe.jpg",layout: "double"},
-        { src: "WORK_EX/bb/horseshoe2.png",layout: "double", caption: 'Preparing materials for installation'},
-        { src: "WORK_EX/bb/bb.vs.a.png",layout: "double", caption: 'Betty Beaumont, <i>Voices (Whose, Which, What)</i>'},
-        { src: "WORK_EX/bb/bb.vs.b.png",layout: "double", caption: 'for Betty Beaumont'},
-        { src: "WORK_EX/bb/bb.vs.bb.a.png",layout: "double", caption: 'Betty Beaumont, <i>Voices (Whose, Which, What)</i>'},
-        { src: "WORK_EX/bb/bb.vs.bb.b.png",layout: "double", caption: 'for Betty Beaumont'},
-        { src: "WORK_EX/yve/yy.piti.install.png", caption: 'Photographing and measuring works'},
-      ]
-    },
-
-  projectWebsite: {
-  title: 'Personal Website',
-  year: '2025',
-  text: `<p>A continuously updated archive of my design, writing, and digital experiments.</p>`,
-  linkToHome: true,
-  images: []
-},
-
 
    project1: {
       title: '09.11.23',
@@ -324,18 +273,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = fig.querySelector('img');
       if (!img) return;
       img.style.cursor = 'zoom-in';
-      img.addEventListener('click', () => {
-        currentIndex = i;
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-      });
+      img.onclick = () => {
+    currentIndex = i;
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+};
     });
 
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox || e.target === lightboxImg) {
+    lightbox.onclick = e => {
+    if (e.target === lightbox || e.target === lightboxImg) {
         lightbox.style.display = 'none';
-      }
-    });
+    }
+};
   }
 
   document.addEventListener('keydown', e => {
@@ -363,26 +312,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-function initCVLinks() {
-  const workLink = document.getElementById('work-experience-link');
-
-  if (workLink) {
-    workLink.addEventListener('click', e => {
-      e.preventDefault();
-      renderProject('workExperience');
-    });
-  }
-}
-
 function renderProject(key) {
   const project = projects[key];
   if (!project) return;
-
-  // if this is the "Personal Website" project, send user back to CV
-  if (project.linkToHome) {
-    renderProject('cv');
-    return;
-  }
 
   const titleHTML = project.title
     ? `<h2 class="${key === 'cv' ? 'cv-title' : ''}">${project.title}</h2>`
@@ -399,20 +331,17 @@ function renderProject(key) {
     : '';
 
   content.innerHTML = `
-    <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
-      ${project.images ? renderImages(project.images) : ''}
-    </div>
-    <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
-      ${titleHTML}
-      ${metaHTML}
-      ${textHTML}
-    </div>
-  `;
-
-  initLightboxAndNav();
-  initCVLinks(); // so the Work Experience link works whenever CV is shown
+  <div class="content-images ${key === 'cv' ? 'cv-image' : ''}">
+    ${project.images ? renderImages(project.images) : ''}
+  </div>
+  <div class="content-text ${key === 'cv' ? 'cv-text' : ''}">
+    ${titleHTML}
+    ${metaHTML}
+    ${textHTML}
+  </div>
+`;
+initLightboxAndNav();
 }
-
   sidebarLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
