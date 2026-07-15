@@ -80,31 +80,6 @@ body {
   text-decoration: underline;
 }
 
-.sidebar nav a::before {
-    content: "";
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.sidebar nav a[data-type="publication"]::before {
-    background: dodgerblue;
-}
-
-.sidebar nav a[data-type="website"]::before {
-    background: tomato;
-}
-
-.sidebar nav a[data-type="print"]::before {
-    background: limegreen;
-}
-
-.sidebar nav a[data-type="identity"]::before {
-    background: gold;
-}
-
 
 .sidebar .social-links {
   margin-top: auto;
