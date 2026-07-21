@@ -17,6 +17,50 @@ body {
   background: var(--bg);
 }
 
+.filters a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.4em;
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+.filters a:hover {
+  color: dodgerblue;
+}
+
+.filters a.active {
+  text-decoration: underline;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: clamp(260px,25vw,360px);
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu {
+    overflow-y: auto;
+    flex: 1;
+    padding-bottom: 120px;
+}
+
+.social-links {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background: white;
+    z-index: 10;
+    padding-top: 25px;
+}
+
 .sidebar-projects p {
   font-size: 0.8em;
   margin-top: 2em;
@@ -26,18 +70,6 @@ body {
 
 .sidebar-projects .sidebar-heading {
   text-decoration: none;
-}
-
-.sidebar {
-  width:clamp(260px,25vw,360px);
-  color: var(--text);
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
 }
 
 .sidebar h1 {
@@ -68,8 +100,27 @@ body {
 }
 
 .sidebar nav a {
+  display: block;
   color: black;
   text-decoration: none;
+}
+
+.project-title {
+  display: block;
+}
+
+.project-subtitle {
+  display: block;
+  margin-left: 0.8em;
+  margin-top: 0.25em;
+  margin-bottom: 0.8em;
+  color: #666;
+  font-size: 0.7em;
+  line-height: 1.3em;
+}
+
+.sidebar nav a:hover .project-subtitle {
+  color: dodgerblue;
 }
 
 .sidebar nav a:hover{
@@ -86,9 +137,9 @@ body {
 }
 
 .sidebar .social-links a {
-  color: black;
   display: block;
   margin-top: 0.4em;
+  color: black;
   text-decoration: none;
   font-size: 0.8em;
 }

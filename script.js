@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
   const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+  const filterLinks = document.querySelectorAll('.filter');
   const menuToggle = document.querySelector('.menu-toggle');
   const content = document.getElementById('project-content');
-
   const projects = {
     cv: {
       title: 'Curriculum Vitae',
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    project1: {
       title: '09.11.23',
+      category: ["publication","personal"],
       medium: 'French bound copy paper.',
       dimensions: '4.25 x 11 in, 96 pages',
       year: '2025',
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     project4: {
       title: 'GG X GG',
-      medium: 'Inkjet & <a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a>.',
+      medium: 'Inkjet & <u><a href="https://emilybudiman.github.io/LetterBank/" target="_blank" rel="noopener noreferrer">Website</a></u>.',
       dimensions: '5 x 7 in',
       year: '2024',
       text: 'A limited letterbank sourced from the text on shirts from the thrift store. Playing on rehoming and reusing objects.',
@@ -208,10 +209,53 @@ document.addEventListener('DOMContentLoaded', () => {
       medium: 'Woodcut print.',
       dimensions: '12.5 x 17 in',
       year: '2025',
+      text: 'Images taken by me on a fishing day.',
       images: [
         {src: 'SUNDAY_FISH/SF_2.png', layout:"double"},
         {src: 'SUNDAY_FISH/SF_3.png', layout:"double"},
         {src: 'SUNDAY_FISH/SF_blot.png'},
+        {src: 'SUNDAY_FISH/initial_fish.png', caption: 'Initial digital sketch, 26/07/23.'},
+      ]
+    },
+    project16: {
+      title: 'Fish Tales <br> for Betty Beaumont',
+      medium: 'Photo series.',
+      year: '2026',
+      text: 'Betty Beaumont <br> 1981 <br> 20 illustrated test and image flash cards with source notes. <br><br>Illustrations of unknown fish (A-Z) from National Oceanic and Atmospheric Administration (NOAA), NOAA Dumpsite Evaluation Report 75-1: May 1874 Baseline Investigation of Deepwater Dumpsite 106 (Rockville, Md., 1975).',
+      images: [
+        {src: 'WORK_EX/bb/bb.fishtales.a.jpg', layout:"double"},
+        {src: 'WORK_EX/bb/bb.fishtales.b.jpg', layout:"double"},
+        {src: 'WORK_EX/bb/bb.fishtales.full.jpg'},
+      ]
+    },
+    project17: {
+      title: 'Musica Studios',
+      year: '2023',
+      text: 'Work done under the mentorship of the Graphic Design Team for Musica Studios: an Indonesian record company based in Jakarta.',
+      images: [
+        {src: 'WORK_EX/musica/zerosix_mv.png', caption: 'Music video thumbnail, <i>Tebar Pesona</i> — ZerosiX Park.'},
+        {src: 'WORK_EX/musica/vierra_cover.png', caption: 'Album cover, <i>My First Love</i> — Vierra.', layout:"double"},
+        {src: 'WORK_EX/musica/satriathemonster_cover.png', caption: 'Single cover, <i>Seperti</i> — Satria the Monster.', layout:"double"},
+        {src: 'WORK_EX/musica/jopieitem_yt.png'},
+        {src: 'WORK_EX/musica/peraukertas1.png', caption: 'Single cover, <i>Love is Pure/Go Away!</i> — Peraukertas. First draft.',layout:"double"},
+        {src: 'WORK_EX/musica/peraukertas_cover.png', caption: 'Single cover, <i>Love is Pure/Go Away!</i> — Peraukertas. Final draft.', layout:"double"},
+      ]
+    },
+    project18: {
+      title: 'I hold on for dear life <br> for Joanne Setiawan',
+      medium: 'Stab bound lookbook and portfolio, scans, and prints.',
+      year: '2026',
+      text: '"My collection lingers in the liminal space between memory & reality. We often look for a final answer, but when reality settles, what remains is not the certainty imagined, only its echo. Utilizing weaving, dyeing, hand-painting, and print techniques, the garments represent the transitional distortion of memory. These treatments are a recapture of this reality, pieced together in an attempt to re-establish a sense of belonging in this transitional space."',
+      images: [
+        {src: 'JO/Jo_Exhibition.png'},
+        {src: 'JO/Jo_Portfolio_Jacket3_Inside.png'},
+        {src: 'JO/Jo_Portfolio_01_Cover.png', layout:"double"},
+        {src: 'JO/Jo_Portfolio_02-05_Cover.png', layout:"double"},
+        {src: 'JO/Jo_Portfolio_02-05_0.png'},
+        {src: 'JO/Jo_Portfolio_01_6-7.png'},
+        {src: 'JO/Jo_Portfolio_01_12-13.png'},
+        {src: 'JO/Jo_Lookbook_Cover.png'},
+        {src: 'JO/IMG_4036.png'},
       ]
     },
   };
@@ -252,6 +296,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   let lightbox, lightboxImg;
 
+function filterProjects(type) {
+
+  sidebarLinks.forEach(link => {
+    const types = (link.dataset.type || "").split(" ");
+
+    if (type === "all" || types.includes(type)) {
+      link.parentElement.style.display = "";
+    } else {
+      link.parentElement.style.display = "none";
+    }
+  });
+}
   function initLightboxAndNav() {
     figures = Array.from(document.querySelectorAll('.content-images figure'));
     currentIndex = 0;
@@ -356,6 +412,16 @@ initLightboxAndNav();
       }
     });
   });
+  filterLinks.forEach(button => {
+  button.addEventListener("click", e => {
+    e.preventDefault();
+
+    filterLinks.forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
+
+    filterProjects(button.dataset.filter);
+  });
+});
 
   renderProject('cv');
 });
