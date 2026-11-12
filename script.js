@@ -217,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'SUNDAY_FISH/initial_fish.png', caption: 'Initial digital sketch, 26/07/23.'},
       ]
     },
+    /*
     project16: {
       title: 'Fish Tales <br> for Betty Beaumont',
       medium: 'Photo series.',
@@ -228,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {src: 'WORK_EX/bb/bb.fishtales.full.jpg'},
       ]
     },
+    */
     project17: {
       title: 'Musica Studios',
       year: '2023',
@@ -249,13 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         {src: 'JO/Jo_Exhibition.png'},
         {src: 'JO/Jo_Portfolio_Jacket3_Inside.png'},
-        {src: 'JO/Jo_Portfolio_01_Cover.png', layout:"double"},
-        {src: 'JO/Jo_Portfolio_02-05_Cover.png', layout:"double"},
-        {src: 'JO/Jo_Portfolio_02-05_0.png'},
-        {src: 'JO/Jo_Portfolio_01_6-7.png'},
-        {src: 'JO/Jo_Portfolio_01_12-13.png'},
+        {src: 'JO/PDF_Portfolio.png'},
+        {src: 'JO/PDF_Portfolio2.png'},
         {src: 'JO/Jo_Lookbook_Cover.png'},
-        {src: 'JO/IMG_4036.png'},
+        {src: 'JO/3-4.png', layout:"double"},
+        {src: 'JO/4-5.png', layout:"double"},
       ]
     },
   };
