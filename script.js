@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <li>BFA in Communication Design, <br><a href="https://www.newschool.edu/parsons/" target="_blank" rel="noopener noreferrer">Parsons School of Design</a>, 2026</li>
           
           <p><u>Work Experience</u></p>
-          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Digital Media Specialist<br> July 2025 – July 2026</li>
+          <li><a href="https://www.bettybeaumont.com/" target="_blank" rel="noopener noreferrer">Betty Beaumont Studio</a><br>Digital Media Specialist<br> July 2025 – Present</li>
           <li><a href="https://www.fusetronsound.com/" target="_blank" rel="noopener noreferrer">Fusetron Sound</a><br>Archival & Digital Media Intern<br> July – December 2025</li>
           <li><a href="https://www.yveyang.com/" target="_blank" rel="noopener noreferrer">YveYANG Gallery</a><br>Gallery Assistant & Graphic Designer<br> March 2024 – March 2025</li>
           <li><a href="https://dgalleriejakarta.com/" target="_blank" rel="noopener noreferrer">D Gallerie</a><br>Gallery Intern<br> July – August 2024</li>
